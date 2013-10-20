@@ -1,0 +1,42 @@
+PidFile = /var/hhvm/hhvm.pid
+
+Server {
+  Port = 80
+  SourceRoot = /vagrant
+  DefaultDocument = index.php
+}
+
+Log {
+  Level = Warning
+  NoSilencer = true
+  AlwaysLogUnhandledExceptions = true
+  RuntimeErrorReportingLevel = 8191
+  UseLogFile = true
+  UseSyslog = false
+  File = /var/hhvm/error.log
+  Access {
+    * {
+      File = /var/hhvm/access.log
+      Format = %h %l %u % t \”%r\” %>s %b
+    }
+  }
+}
+
+Repo {
+  Central {
+    Path = /var/hhvm/.hhvm.hhbc
+  }
+}
+
+#include "/usr/share/hhvm/hdf/static.mime-types.hdf"
+StaticFile {
+  FilesMatch {
+    * {
+      pattern = .*\.(dll|exe)
+      headers {
+        * = Content-Disposition: attachment
+      }
+    }
+  }
+  Extensions : StaticMimeTypes
+}
