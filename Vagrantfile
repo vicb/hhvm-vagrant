@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1536"] # hhvm needs at least 1.2GB memory with its default config
+    vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
   end
 
   config.vm.provision "shell", inline: <<-shell
