@@ -2,8 +2,13 @@ PidFile = /var/hhvm/hhvm.pid
 
 Server {
   Port = 80
-  SourceRoot = /vagrant
+  SourceRoot = /vagrant/www
   DefaultDocument = index.php
+}
+
+AdminServer {
+  Port = 8080
+  password=admin
 }
 
 Log {
