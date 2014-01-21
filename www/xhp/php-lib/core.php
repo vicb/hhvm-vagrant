@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
   +----------------------------------------------------------------------+
   | XHP                                                                  |
@@ -372,7 +372,7 @@ abstract class :x:composable-element extends :x:base {
     unset($this->attributes[$attr]);
     return $this;
   }
-  
+
   /**
    * Sets an attribute in this element's attribute store. Always foregoes
    * validation.
