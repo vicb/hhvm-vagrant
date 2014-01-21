@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
-  config.vm.network :forwarded_port, guest: 8080, host: 8081
+  config.vm.network :forwarded_port, guest: 8000, host: 8100
   config.vm.network :private_network, ip: "192.168.66.66"
 
   config.vm.provider :virtualbox do |vb|
@@ -21,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     echo "deb http://dl.hhvm.com/ubuntu precise main" > /etc/apt/sources.list.d/hhvm.list
     apt-get update
     apt-get install hhvm-nightly -y --force-yes
+    apt-get install screen vim -y --force-yes
 
     sudo chown vagrant /etc/hhvm
     sudo cp /vagrant/conf/config.hdf /etc/hhvm/config.hdf

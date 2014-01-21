@@ -6,9 +6,16 @@ Server {
   DefaultDocument = index.php
 }
 
+Eval {
+  EnableXHP = true
+  AllowHhas = true
+  EnableHipHopSyntax = true
+  EnableZendCompat = true
+}
+
 AdminServer {
-  Port = 8080
-  password=admin
+  Port = 8000
+  Password = admin
 }
 
 Log {
@@ -25,6 +32,13 @@ Log {
       Format = %h %l %u % t \”%r\” %>s %b
     }
   }
+}
+
+Debug {
+ FullBacktrace = true
+ ServerStackTrace = true
+ ServerErrorMessage = true
+ TranslateSource = true
 }
 
 Repo {
@@ -45,3 +59,12 @@ StaticFile {
   }
   Extensions : StaticMimeTypes
 }
+
+MySQL {
+  ReadOnly = false
+  ConnectTimeout = 1000      # in ms
+  ReadTimeout = 1000         # in ms
+  SlowQueryThreshold = 1000  # in ms, log slow queries as errors
+  KillOnTimeout = false
+}
+
