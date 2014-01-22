@@ -42,6 +42,14 @@ You can find more information on the `hdf` format:
 - On the [HHVM wiki at github](https://github.com/facebook/hhvm/wiki/Runtime-options),
 - In the [doc](https://github.com/facebook/hhvm/blob/master/hphp/doc/options.compiled) - warning outdated info.
 
+The access and error log are available in `/var/hhvm`
+
+```bash
+$ vagrant ssh
+$ tail -f /var/hhvm/access.log
+$ tail -f /var/hhvm/error.log
+```
+
 Virtual Machine Management
 --------------------------
 
