@@ -18,7 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell", inline: <<-shell
-    echo "deb http://dl.hhvm.com/ubuntu precise main" > /etc/apt/sources.list.d/hhvm.list
+    wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
+    echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
     apt-get update
     apt-get install hhvm-nightly -y --force-yes
     apt-get install screen vim -y --force-yes
