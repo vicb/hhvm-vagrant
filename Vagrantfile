@@ -23,6 +23,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get update
     apt-get install hhvm-nightly -y --force-yes
     apt-get install screen vim -y --force-yes
+    debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password pa$$'
+    debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password pa$$'
+    apt-get install mysql-server -y --force-yes
 
     sudo chown vagrant /etc/hhvm
     sudo cp /vagrant/conf/config.hdf /etc/hhvm/config.hdf

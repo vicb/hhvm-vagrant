@@ -31,6 +31,7 @@ on your host machine.
 - The HHVM server is available at `http://localhost:8080` on the host OS
 - The HHVM admin server is available at `http://localhost:8100` on the host OS,
   the password is "admin"
+- A MySQL server is installed. The root user is "root" with password "pa$$".
 
 HHVM Server Configuration
 -------------------------
