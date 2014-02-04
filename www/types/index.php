@@ -42,7 +42,7 @@ class Generics<T as countable> {
     }
 }
 
-$type = new Generics<Vector<int>>();
+$type = new Generics();
 $type->set(Vector {1, 2, 3});
 
 echo <div>$type
@@ -51,7 +51,11 @@ echo <div>$type
         <li>size = {$type->count()}</li> <!-- 3 -->
     </ul></div>;
 
-// To keep performance at a top level, there is no runtime type check
+// To keep performance at a top level, the runtime check is partial.
+// The runtime check doesn't iterate on objects. In the case of array<int>
+// passing an int would be caught both at runtime and by the type-checker,
+// however passing an array of strings (like in this case) would only be
+// caught by the type-checker.
 // Those programming errors would be caught by the (yet to be release)
 // static analyzer
 sum(["a", "b"]);
