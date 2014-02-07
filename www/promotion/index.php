@@ -19,6 +19,9 @@ class PHPClass {
 //}
 var_dump(new PHPClass('pub', 'pro', 'pri'));
 
+// The same class written in HACK is much more concise
+// thanks to constructor argument promotion.
+
 class HHClass {
     public function __construct(public $pub, protected $pro, private $pri) {}
 }
