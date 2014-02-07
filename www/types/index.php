@@ -22,7 +22,7 @@ function sum(array<int> $a) {
 
 echo <p>sum([1, 2, 3]) = {sum([1, 2, 3])}</p>; // sum([1, 2, 3]) = 6
 
-class Generics<T as countable> {
+class Generics<T as Countable> {
     private ?T $t;
 
     public function get() : T {
