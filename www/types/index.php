@@ -38,7 +38,7 @@ class Generics<T as Countable> {
     }
 
     public function count() {
-        return $this->t->count();
+        return $this->t ? $this->t->count() : 0;
     }
 }
 
