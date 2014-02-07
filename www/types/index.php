@@ -25,7 +25,7 @@ echo <p>sum([1, 2, 3]) = {sum([1, 2, 3])}</p>; // sum([1, 2, 3]) = 6
 class Generics<T as Countable> {
     private ?T $t;
 
-    public function get() : T {
+    public function get() : ?T {
         return $this->t;
     }
 
