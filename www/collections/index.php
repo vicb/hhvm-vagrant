@@ -18,8 +18,8 @@ $m->add(Pair {"d", 4});
 
 echo <div>Map:
     <ul>
-        <li>contains "a": {$m->contains("a") ? "yes" : "no"}</li> // yes
-        <li>contains "c": {$m->contains("c") ? "yes" : "no"}</li> // no
-        <li>size: {$m->count()}</li> // 3
+        <li>contains "a": {$m->contains("a") ? "yes" : "no"}</li> <!-- yes -->
+        <li>contains "c": {$m->contains("c") ? "yes" : "no"}</li> <!-- no -->
+        <li>size: {$m->count()}</li> <!-- 3 -->
     </ul>
 </div>;
