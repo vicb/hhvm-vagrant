@@ -14,7 +14,7 @@ Installation
 
 ```bash
 $ git clone https://github.com/vicb/hhvm-vagrant.git
-$ cd hhvm-vagrant-vm
+$ cd hhvm-vagrant
 $ vagrant up
 ```
 
