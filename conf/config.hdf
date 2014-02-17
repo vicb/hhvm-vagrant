@@ -10,12 +10,24 @@ Eval {
   EnableXHP = true
   AllowHhas = true
   EnableHipHopSyntax = true
-  EnableZendCompat = true
+  EnableZendCompat = false
 }
 
 AdminServer {
   Port = 8000
   Password = admin
+}
+
+ErrorHandling {
+  ThrowBadTypeExceptions = true
+  ThrowInvalidArguments = true
+}
+
+PhpFile {
+  Extensions {
+    phpt = application/x-phpt
+    hphp = application/x-hhvm-php
+  }
 }
 
 Log {
@@ -25,10 +37,10 @@ Log {
   RuntimeErrorReportingLevel = 8191
   UseLogFile = true
   UseSyslog = false
-  File = /var/hhvm/error.log
+  File = /var/log/hhvm/error.log
   Access {
     * {
-      File = /var/hhvm/access.log
+      File = /var/log/hhvm/access.log
       Format = %h %l %u % t \”%r\” %>s %b
     }
   }

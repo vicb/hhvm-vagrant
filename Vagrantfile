@@ -31,13 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sudo cp /vagrant/conf/config.hdf /etc/hhvm/my-config.hdf
     sudo cp /vagrant/conf/php.ini /etc/hhvm/my-php.ini
 
-    if [ ! -d /var/hhvm ]; then
-      echo "Creating /var/hhvm/error.log"
-      sudo mkdir /var/hhvm
-      sudo touch /var/hhvm/error.log
-      sudo chown vagrant /var/hhvm/error.log
-    fi
-
     hhvm -m daemon -c /etc/hhvm/my-config.hdf
   shell
 end
