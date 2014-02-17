@@ -10,24 +10,12 @@ Eval {
   EnableXHP = true
   AllowHhas = true
   EnableHipHopSyntax = true
-  EnableZendCompat = false
+  EnableZendCompat = true
 }
 
 AdminServer {
   Port = 8000
   Password = admin
-}
-
-ErrorHandling {
-  ThrowBadTypeExceptions = true
-  ThrowInvalidArguments = true
-}
-
-PhpFile {
-  Extensions {
-    phpt = application/x-phpt
-    hphp = application/x-hhvm-php
-  }
 }
 
 Log {
