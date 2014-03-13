@@ -18,6 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell", inline: <<-shell
+    apt-get update
+    apt-get install python-software-properties  -y --force-yes
+    add-apt-repository ppa:mapnik/boost
     wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
     echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
     apt-get update
