@@ -101,6 +101,9 @@ $ vagrant destroy
 Credits
 -------
 
+contributors:
+- @donmccurdy has added the NGINX configuration
+
 I got some inspiration from:
 - https://github.com/adrienbrault/hhvm-vagrant
 - https://github.com/javer/hhvm-vagrant-vm
