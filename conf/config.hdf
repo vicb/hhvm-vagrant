@@ -1,7 +1,8 @@
 PidFile = /var/hhvm/hhvm.pid
 
 Server {
-  Port = 80
+  Port = 9000
+  Type = fastcgi
   SourceRoot = /vagrant/www
   DefaultDocument = index.php
 }
@@ -47,7 +48,7 @@ Repo {
   }
 }
 
-#include "/usr/share/hhvm/hdf/static.mime-types.hdf"
+# include "/usr/share/hhvm/hdf/static.mime-types.hdf"
 StaticFile {
   FilesMatch {
     * {

@@ -1,0 +1,35 @@
+# FastCGI Redirect to HHVM
+# 	Assumes HHVM is on port 9000.
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
+
+	root /vagrant/www;
+	index index.html index.htm index.hh index.php;
+
+	# Make site accessible from http://localhost/
+	server_name localhost;
+	
+       location / {
+                index index.php;
+                try_files $uri $uri/ @handler;
+                expires 30d;
+        }
+        location @handler {
+                rewrite / /index.php;
+        }
+        location ~ .(php|hh)$ {
+                fastcgi_keep_conn on;
+                if (!-e $request_filename) { rewrite / /index.php last; }
+                expires        off;
+                fastcgi_pass   127.0.0.1:9000;
+                fastcgi_param PHP_VALUE "error_log=/var/report/PHP.error.log";
+                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                include        fastcgi_params;
+        }
+        location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+                expires 1y;
+                log_not_found off;
+        }
+}
