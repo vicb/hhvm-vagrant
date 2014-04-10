@@ -3,10 +3,10 @@ HHVM Vagrant box
 
 Ubuntu Precise box simply installing HHVM (nightly) via apt.
 
-Find mored details on the examples found in the [www](https://github.com/vicb/hhvm-vagrant/tree/master/www) 
-folder by reading the associated SitePoint article "HHVM and Hack – Can We Expect Them to Replace PHP?"
-[part 1](http://www.sitepoint.com/hhvm-hack-part-1/) and [part 2](http://www.sitepoint.com/look-hack-php-replacement-hhvm/).
-
+Find more details on the examples found in the [www](https://github.com/vicb/hhvm-vagrant/tree/master/www)
+folder by reading the associated SitePoint article "HHVM and Hack – Can We
+Expect Them to Replace PHP?" [part 1](http://www.sitepoint.com/hhvm-hack-part-1/)
+and [part 2](http://www.sitepoint.com/look-hack-php-replacement-hhvm/).
 
 Requirements
 ------------
@@ -41,8 +41,8 @@ on your host machine.
 HHVM Server Configuration
 -------------------------
 
-If you want to tweak the configuration, edit the `conf/config.hdf` and
-`conf/php.ini` files.
+If you want to tweak the configuration, edit the `conf/php.ini` file. The hdf
+format is deprecated and support will be dropped (`conf/config.hdf`).
 
 You can find more information on the `hdf` format:
 - On the [HHVM wiki at github](https://github.com/facebook/hhvm/wiki/Runtime-options),

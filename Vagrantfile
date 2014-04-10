@@ -40,6 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     sudo ln -s /etc/nginx/sites-available/nginx-fastcgi /etc/nginx/sites-enabled/nginx-fastcgi
     sudo service nginx restart
 
-    hhvm -m daemon -c /etc/hhvm/my-config.hdf
+    hhvm -m daemon -c /etc/hhvm/my-php.ini -v Eval.EnableXHP=1
+
   shell
 end

@@ -1,6 +1,6 @@
 <?hh
 
-echo 'It works !';
+echo 'Hack works !';
 
 
 
