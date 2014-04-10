@@ -102,7 +102,7 @@ Credits
 -------
 
 contributors:
-- @donmccurdy has added the NGINX configuration
+- [donmccurdy](https://github.com/donmccurdy) has added the NGINX configuration
 
 I got some inspiration from:
 - https://github.com/adrienbrault/hhvm-vagrant
