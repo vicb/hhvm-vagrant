@@ -44,9 +44,9 @@ HHVM Server Configuration
 If you want to tweak the configuration, edit the `conf/php.ini` file. The hdf
 format is deprecated and support will be dropped (`conf/config.hdf`).
 
-You can find more information on the `hdf` format:
+You can find more information on the configuration format:
 - On the [HHVM wiki at github](https://github.com/facebook/hhvm/wiki/Runtime-options),
-- In the [doc](https://github.com/facebook/hhvm/blob/master/hphp/doc/options.compiled) - warning outdated info.
+- In the [HHVM docs](http://docs.hhvm.com/manual/en/configuration.file.php).
 
 The access and error logs are available in `/var/log/hhvm`
 
