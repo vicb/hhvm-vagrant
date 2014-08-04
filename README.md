@@ -1,5 +1,4 @@
-HHVM Vagrant box
-================
+# HHVM Vagrant box
 
 Ubuntu Precise box simply installing HHVM (nightly) via apt.
 
@@ -8,14 +7,12 @@ folder by reading the associated SitePoint article "HHVM and Hack – Can We
 Expect Them to Replace PHP?" [part 1](http://www.sitepoint.com/hhvm-hack-part-1/)
 and [part 2](http://www.sitepoint.com/look-hack-php-replacement-hhvm/).
 
-Requirements
-------------
+## Requirements
 
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
-Installation
-------------
+## Installation
 
 ```bash
 $ git clone https://github.com/vicb/hhvm-vagrant.git
@@ -38,8 +35,12 @@ on your host machine.
   the password is "admin"
 - A MySQL server is installed. The root user is "root" with password "pa$$".
 
-HHVM Server Configuration
--------------------------
+## Usage
+
+Check the [bootstraping guide)(http://docs.hhvm.com/manual/en/install.hack.bootstrapping.php)
+and the [HHVM docs](http://docs.hhvm.com/manual/en/index.php).
+
+## HHVM Server Configuration
 
 If you want to tweak the configuration, edit the `conf/php.ini` file. The hdf
 format is deprecated and support will be dropped (`conf/config.hdf`).
@@ -56,8 +57,7 @@ $ tail -f /var/log/hhvm/access.log
 $ tail -f /var/log/hhvm/error.log
 ```
 
-Virtual Machine Management
---------------------------
+## Virtual Machine Management
 
 When done just log out with `^D` and suspend the virtual machine
 
@@ -98,8 +98,7 @@ its contents**:
 $ vagrant destroy
 ```
 
-Credits
--------
+## Credits
 
 contributors:
 - [donmccurdy](https://github.com/donmccurdy) has added the NGINX configuration
