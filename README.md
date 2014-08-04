@@ -37,7 +37,7 @@ on your host machine.
 
 ## Usage
 
-Check the [bootstraping guide)(http://docs.hhvm.com/manual/en/install.hack.bootstrapping.php)
+Check the [bootstraping guide](http://docs.hhvm.com/manual/en/install.hack.bootstrapping.php)
 and the [HHVM docs](http://docs.hhvm.com/manual/en/index.php).
 
 ## HHVM Server Configuration
